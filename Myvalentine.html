@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9aa2, #ffc3a0);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 350px;
+  position: relative;
+}
+
+.couple {
+  font-size: 50px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background: #ff4d6d;
+  color: white;
+}
+
+#noBtn {
+  background: gray;
+  color: white;
+  position: absolute;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  text-align: center;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="couple">👫❤️</div>
+
+<h2>Hi Shafi ❤️</h2>
+
+<p>
+Hey baby… Vinusha loves you so much 🥰<br>
+I am so glad to have you as my partner 💕<br><br>
+Will you be my Valentine baby?
+</p>
+
+<button id="yesBtn" onclick="yesClicked()">YES 💖</button>
+<button id="noBtn">NO 😜</button>
+
+</div>
+
+<div class="popup" id="popup">
+<h2>Yayyyy!!! ❤️</h2>
+<p>Love you sooo much baby 💕</p>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", function() {
+  const x = Math.random() * 250 - 125;
+  const y = Math.random() * 250 - 125;
+  noBtn.style.transform = "translate(" + x + "px," + y + "px)";
+  alert("Don't touch me please 😝");
+});
+
+function yesClicked() {
+  document.getElementById("popup").style.display = "block";
+}
+</script>
+
+</body>
+</html>
